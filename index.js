@@ -7,13 +7,15 @@ var person = {
   }
 }
 
-var names = ['Dustin', 'Alyona', 'Brutus', 'Rusty'];
+var names = ['Dustin Hammack', 'Alyona Hammack', 'Brutus Hammack', 'Rusty Hammack'];
 var ages = [29, 26, 5, 8];
 var el = document.getElementById('content');
 
 names.forEach(function(name, i) {
-  person.name = name;
+//   var indx = indexOf(' ');
+  person.firstName = name.substr(0, name.indexOf(' '));
+  person.lastName = name.substr(name.indexOf(' '));
   person.age = ages[i];
   
-  el.innerHTML += '<p>Name: ' + person.name + '<br/>Age: ' + person.age + '<p>';  
+  el.innerHTML += '<p>Name: ' + person.firstName + ' ' + person.lastName + '<br/>Age: ' + person.age + '<p>';  
 });
