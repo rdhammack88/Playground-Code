@@ -1,4 +1,35 @@
 
+///////////////////////// WORKED!! /////////////////////////////////
+
+
+
+function truthCheck(collection, pre) {
+  // Is everyone being true?
+  
+  for(var obj in collection) {
+    if(collection[obj].hasOwnProperty(pre) &&  !Boolean(collection[obj][pre]) || collection[obj][pre] === undefined) {
+      return false;
+    }
+  }  
+  return true;
+}
+
+// truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+
+// truthCheck([{"single": ""}, {"single": "double"}], "single");
+
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+
+
+/////////////////////////////#####################################
+
+
+
+/////////////////////////////#####################################
+
+
+
+
 function truthCheck(collection, pre) {
   // Is everyone being true?
 //   var res = true;
@@ -57,7 +88,6 @@ truthCheck([{"single": "double"}, {"single": NaN}], "single");
 
 
 
-/////////////////////////////#####################################
 
 
 
@@ -65,7 +95,45 @@ truthCheck([{"single": "double"}, {"single": NaN}], "single");
 
 
 
-/////////////////////////////#####################################
+
+function truthCheck(collection, pre) {
+  // Is everyone being true?
+  
+  collection.forEach(function(obj) {
+//     if(obj[pre] == 'female') {
+//       return this.user;
+//     }
+    
+//     if(obj.hasOwnProperty(pre) ) {
+//       return obj[pre];
+//     }
+  });
+  
+  
+  for(var obj in collection) {
+    if(collection[obj].hasOwnProperty(pre) &&  !Boolean(collection[obj][pre]) || collection[obj][pre] === undefined) {
+      return false;
+    }
+  } //!collection[obj][pre].length ||
+  
+  return true;
+  
+//   for(var obj in collection) {
+//     if(obj[pre]) {
+//       return obj[pre];
+//     }
+//   }
+//   return false;
+  
+//   return pre;
+}
+
+// truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+
+// truthCheck([{"single": ""}, {"single": "double"}], "single");
+
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex")
+
 
 
 
